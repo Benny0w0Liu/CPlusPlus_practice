@@ -10,7 +10,19 @@ int main(){
 	}
 	
 	for(int number : numbers){
-		cout<<number<<endl;
+		cout<<number<<" ";
+	}
+	cout<<"\n";
+	
+	//insert
+	numbers.insert(numbers.begin()+5,88);
+	//erase
+	numbers.erase(numbers.begin()+3);
+	//pop_back
+	numbers.pop_back();
+	//iterator 
+	for(auto it=numbers.begin();it!=numbers.end();it++){
+		cout<<*it<<" ";
 	}
 	
 	return 0;
