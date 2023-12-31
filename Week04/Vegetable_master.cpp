@@ -220,7 +220,7 @@ int main(){
         user.Check();
         cout<<"\ninput any character to go to next day >>";
         cin>>ch;
-        system("cls"); 
+        system("cls");
     }
     char cha;
     cout<<"Total : "<<user.Total<<endl;
