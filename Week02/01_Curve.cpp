@@ -2,7 +2,7 @@
 #include<iomanip>
 using namespace std;
 int main(){
-	int n,direction=0,x=-1,y=0,count=0;
+	int n;
 	cin>>n;
 	int user[n*n];
 	for(int i=0;i<n*n;i++){
