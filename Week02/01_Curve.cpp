@@ -12,21 +12,22 @@ int main(){
 	int i=0, j=0, di=0, dj=1;
     for (int x=0; x<n*n; x++) {
         arr[i][j] = user[x];
-        if (i+di<0 || i+di>=n || j+dj<0 || j+dj>=n || arr[i+di][j+dj]!=0) {
-            if(di== 0 && dj== 1){
-				di= 1;
-				dj= 0;
-			}else if(di== 1 && dj== 0){
-				di= 0; 
-				dj=-1;
-			}else if(di== 0 && dj==-1){
-				di=-1; 
-				dj= 0;
-			}else if(di==-1 && dj== 0) {
-				di= 0; 
-				dj= 1;
-			}
-        }
+        if(i==j+1 && j<n/2){
+        	di=0;
+			dj=1;
+		}
+		if(i+j==n-1 && j>=n/2){
+			di=1;
+			dj=0;
+		}
+		if(i==j && j>=n/2){
+			di=0;
+			dj=-1;
+		}
+		if(i+j==n-1 && j<n/2){
+			di=-1;
+			dj=0;
+		}
         i+=di; j+=dj;
     }
 	for(int i=0;i<n;i++){
